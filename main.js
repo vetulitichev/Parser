@@ -42,7 +42,7 @@ function parseHTML(arr) {
                 });
                 chunk.on('end', () => {
                     result.push(getInfo(htmlPage, url));
-                    if (result.length == 10) {
+                    if (result.length == arr.length) {
                         resolve(result);
                     }
                 })
